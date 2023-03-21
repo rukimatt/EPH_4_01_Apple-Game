@@ -3,6 +3,7 @@ package my_project.control;
 import KAGO_framework.control.ViewController;
 import my_project.Config;
 import my_project.model.Apple;
+import my_project.model.Peach;
 import my_project.model.Pear;
 import my_project.model.Player;
 
@@ -18,8 +19,9 @@ public class ProgramController {
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
 
-    private Apple apple01;
-    private Pear pear01;
+    private Apple apple01, apple02, apple03, apple04;
+    private Pear pear01, pear02, pear03, pear04;
+    private Peach peach01;
     private Player player01;
 
     /**
@@ -42,11 +44,28 @@ public class ProgramController {
         double yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
         apple01 = new Apple(xPos, yPos);
         viewController.draw(apple01);
+        apple02 = new Apple(xPos, yPos);
+        viewController.draw(apple02);
+        apple03 = new Apple(xPos, yPos);
+        viewController.draw(apple03);
+        apple04 = new Apple(xPos, yPos);
+        viewController.draw(apple04);
 
         xPos = Math.random()*(Config.WINDOW_WIDTH-50) + 50;
         yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
         pear01 = new Pear(xPos, yPos);
         viewController.draw(pear01);
+        pear02 = new Pear(xPos, yPos);
+        viewController.draw(pear02);
+        pear03 = new Pear(xPos, yPos);
+        viewController.draw(pear03);
+        pear04 = new Pear(xPos, yPos);
+        viewController.draw(pear04);
+
+        xPos = Math.random()*(Config.WINDOW_WIDTH-50) + 50;
+        yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
+        peach01 = new Peach(xPos, yPos);
+        viewController.draw(peach01);
 
         player01 = new Player(50, Config.WINDOW_HEIGHT-100);
         viewController.draw(player01);
