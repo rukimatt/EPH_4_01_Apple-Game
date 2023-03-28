@@ -148,9 +148,11 @@ public class ProgramController {
             apple05.jumpBack();
         }
 
-        if (checkAndHandleCollision(pear01)) {
-            pear01.jumpBack();
+        if (checkAndHandleCollision(peach01)) {
+            peach01.jumpBack();
         }
+
+
         //Weitere TODOs folgen und werden im Unterricht formuliert. Spätestens nach TODO 08 sollte der Aufbau des Projekts durchdacht werden.
         }
 
@@ -165,6 +167,13 @@ public class ProgramController {
     //TODO 07 Fügen Sie eine Methode checkAndHandleCollision(Pear p) hinzu. Diese gibt true zurück, falls das Pear-Objekt mit dem Player-Objekt kollidiert. Nutzen Sie hierzu die collidesWith-Methode der Klasse GraphicalObject.
     private boolean checkAndHandleCollision(Pear p) {
         if (p.collidesWith(player01)) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean checkAndHandleCollision(Peach a) {
+        if (a.collidesWith(peach01)) {
             return true;
         }
         return false;
