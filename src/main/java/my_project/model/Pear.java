@@ -29,7 +29,7 @@ public class Pear extends GraphicalObject {
         drawTool.setCurrentColor(0, 0, 0, 255);
         drawTool.drawRectangle(x, y, width, height);
          */
-        drawTool.drawImage (getMyImage(), x, y);
+        drawTool.drawImage(getMyImage(), x, y);
     }
 
     @Override
@@ -40,6 +40,7 @@ public class Pear extends GraphicalObject {
             jumpBack();
         }
     }
+
 
     //TODO 04 Lege eine Methode jumpBack() an, die bei Aufruf das Pear-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
     public void jumpBack() {
