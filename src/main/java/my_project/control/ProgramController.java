@@ -3,6 +3,7 @@ package my_project.control;
 import KAGO_framework.control.ViewController;
 import my_project.Config;
 import my_project.model.Apple;
+import my_project.model.Peach;
 import my_project.model.Pear;
 import my_project.model.Player;
 
@@ -20,6 +21,9 @@ public class ProgramController {
 
     private Apple apple01, apple02, apple03, apple04, apple05;
     private Pear pear01, pear02, pear03, pear04, pear05;
+
+    private Peach peach01, peach02, peach03, peach04, peach05;
+
     private Player player01;
 
     /**
@@ -89,6 +93,32 @@ public class ProgramController {
         pear05 = new Pear(xPos, yPos);
         viewController.draw(pear05);
 
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        peach01 = new Peach(xPos, yPos);
+        viewController.draw(peach01);
+
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        peach02 = new Peach(xPos, yPos);
+        viewController.draw(peach02);
+
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        peach03 = new Peach(xPos, yPos);
+        viewController.draw(peach03);
+
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        peach04 = new Peach(xPos, yPos);
+        viewController.draw(peach04);
+
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        peach05 = new Peach(xPos, yPos);
+        viewController.draw(peach05);
+
+
         player01 = new Player(50, Config.WINDOW_HEIGHT - 100);
         viewController.draw(player01);
         viewController.register(player01);
@@ -106,19 +136,19 @@ public class ProgramController {
         }
 
         if (checkAndHandleCollision(pear02)) {
-            pear01.jumpBack();
+            pear02.jumpBack();
         }
 
         if (checkAndHandleCollision(pear03)) {
-            pear01.jumpBack();
+            pear03.jumpBack();
         }
 
         if (checkAndHandleCollision(pear04)) {
-            pear01.jumpBack();
+            pear04.jumpBack();
         }
 
         if (checkAndHandleCollision(pear05)) {
-            pear01.jumpBack();
+            pear05.jumpBack();
         }
 
         if (checkAndHandleCollision(apple01)) {
@@ -126,19 +156,39 @@ public class ProgramController {
         }
 
         if (checkAndHandleCollision(apple02)) {
-            apple01.jumpBack();
+            apple02.jumpBack();
         }
 
         if (checkAndHandleCollision(apple03)) {
-            apple01.jumpBack();
+            apple03.jumpBack();
         }
 
         if (checkAndHandleCollision(apple04)) {
-            apple01.jumpBack();
+            apple04.jumpBack();
         }
 
         if (checkAndHandleCollision(apple05)) {
-            apple01.jumpBack();
+            apple05.jumpBack();
+        }
+
+        if (checkAndHandleCollision(peach01)) {
+            peach01.jumpBack();
+        }
+
+        if (checkAndHandleCollision(peach02)) {
+            peach02.jumpBack();
+        }
+
+        if (checkAndHandleCollision(peach03)) {
+            peach03.jumpBack();
+        }
+
+        if (checkAndHandleCollision(peach04)) {
+            peach04.jumpBack();
+        }
+
+        if (checkAndHandleCollision(peach05)) {
+            peach05.jumpBack();
         }
         //Weitere TODOs folgen und werden im Unterricht formuliert. Spätestens nach TODO 08 sollte der Aufbau des Projekts durchdacht werden.
         }
@@ -146,6 +196,14 @@ public class ProgramController {
     //TODO 06 Fügen Sie eine Methode checkAndHandleCollision(Apple a) hinzu. Diese gibt true zurück, falls das Apple-Objekt mit dem Player-Objekt kollidiert. Nutzen Sie hierzu die collidesWith-Methode der Klasse GraphicalObject.
     private boolean checkAndHandleCollision(Apple a) {
         if (a.collidesWith(player01)) {
+            return true;
+        }
+        return false;
+    }
+
+    //checkAndHandleCollision(Peach p)
+    private boolean checkAndHandleCollision(Peach p) {
+        if (p.collidesWith(player01)) {
             return true;
         }
         return false;

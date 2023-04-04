@@ -20,7 +20,7 @@ public class Peach extends GraphicalObject{
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(new Color (243, 114, 114));
+        drawTool.setCurrentColor(new Color (252, 150, 150));
         drawTool.drawFilledCircle(x, y, radius);
         drawTool.setCurrentColor(0, 0, 0, 255);
         drawTool.drawCircle(x, y, radius);
