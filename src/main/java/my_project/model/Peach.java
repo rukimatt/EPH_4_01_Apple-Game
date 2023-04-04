@@ -14,7 +14,7 @@ public class Peach extends GraphicalObject{
         this.x = x;
         this.y = y;
         speed = 150;
-        radius = 30;
+        radius = 20;
     }
 
 
