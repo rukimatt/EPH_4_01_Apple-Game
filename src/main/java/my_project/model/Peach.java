@@ -15,15 +15,21 @@ public class Peach extends GraphicalObject{
         this.y = y;
         speed = 150;
         radius = 20;
+        this.setNewImage("src/main/resources/graphic/peach.png");
+        this.height = getMyImage().getHeight();
+        this.width = getMyImage().getWidth();
     }
 
 
     @Override
     public void draw(DrawTool drawTool) {
+        /*
         drawTool.setCurrentColor(new Color (252, 150, 150));
         drawTool.drawFilledCircle(x, y, radius);
         drawTool.setCurrentColor(0, 0, 0, 255);
         drawTool.drawCircle(x, y, radius);
+         */
+        drawTool.drawImage (getMyImage(), x, y);
     }
 
     @Override
