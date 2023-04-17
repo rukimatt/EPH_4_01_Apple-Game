@@ -16,7 +16,7 @@ public class Background extends GraphicalObject {
             "\"Eat an apple on going to bed, and you’ll keep the doctor from earning his bread.\" - Wales",
             "\"Ein Apfel am Tag, Arzt gespart!\" - Deutschland",
             "\"Una mela al giorno toglie il medico di torno.\" - Italien",
-            "\"Jedna jabuka na dan, i doktor ti neće ući u stan.\" - Serbien",
+            "\"Jedna jabuka na dan, i doktor ti neće ući u stan.\" - Serbien", //Let's goooo
             "\"Günde bir elma Doktoru uzak tutar.\" - Türkei",
             "\"Rojek sêvek doktor dûr dike\" - Kurdisch",
             "\"تفاحة على الريق تغنيك عن الطبيب\" - Arabisch"};
